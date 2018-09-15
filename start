@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Other Java options
+
+JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC"
+JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication"
+JAVA_OPTS="$JAVA_OPTS -XX:StringDeduplicationAgeThreshold=1"
+
+JAVA_OPTS="$JAVA_OPTS -Xmx128m"
+
+echo "Using these JAVA_OPTS: ${JAVA_OPTS}"
+
+exec java $JAVA_OPTS -jar ./PTNotifications.jar
