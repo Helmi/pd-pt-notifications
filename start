@@ -4,11 +4,9 @@ set -e
 
 # Other Java options
 
-JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC"
-JAVA_OPTS="$JAVA_OPTS -XX:+UseStringDeduplication"
-JAVA_OPTS="$JAVA_OPTS -XX:StringDeduplicationAgeThreshold=1"
-
-JAVA_OPTS="$JAVA_OPTS -Xmx128m"
+JAVA_OPTS="$JAVA_OPTS -XX:+UseConcMarkSweepGC"
+JAVA_OPTS="$JAVA_OPTS -Xms64m"
+JAVA_OPTS="$JAVA_OPTS -Xmx64m"
 
 echo "Using these JAVA_OPTS: ${JAVA_OPTS}"
 

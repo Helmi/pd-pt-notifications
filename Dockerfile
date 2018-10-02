@@ -31,7 +31,7 @@ RUN wget https://github.com/Roy4lz/ptnotifications/releases/download/${PTN_VERSI
 # unzip the app
 RUN unrar e ${PTN_FILENAME} \
   ; rm ${PTN_FILENAME} \
-#  ; rm settings.properties \
+  ; rm settings.properties \
 #  ; mkdir config \
 #  ; ls -la config/ \
 #  ; ln -s ./config/settings.properties . \
